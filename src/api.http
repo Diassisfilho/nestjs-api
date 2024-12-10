@@ -1,0 +1,21 @@
+GET http://localhost:3000/hello
+
+###
+GET http://localhost:3000/places?text=praia iracema
+
+###
+@originID=ChIJU67PJ69JxwcRqSbNdnIItPk
+@destinationID=ChIJMd5nukFIxwcRj1icEUXpLe8
+
+###
+GET http://localhost:3000/directions?originId={{ originID }}&destinationId={{ destinationID }}
+
+###
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "prainha",
+    "source_id": "{{originID}}",
+    "destination_id": "{{destinationID}}"
+}
